@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Index Page</title>
+    </head>
+
+    <body>
+        <h1>Welcome to my blog!</h1>
+
+        <p>Content: </p>
+        <% if (title.length != 0) { %>
+            <% for (x = 0; x <= title.length - 1; x++) {%>
+                <a href = "/post/<%= postUrl[x] %>"><%= title[x] %></a>
+            <% } %>
+        <% } else { %>
+            <p>Nothing here</p>
+        <% } %>
+    </body>
+</html>
