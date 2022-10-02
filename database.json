@@ -1,5 +1,13 @@
-{
+
+[
+  {
     "title": ["Hello world"],
     "posturl": ["test"],
     "content": ["My first blog post"]
-}
+  },
+  {
+    "title": ["Hello world2"],
+    "posturl": ["test2"],
+    "content": ["My first blog post2"]
+  }
+]
