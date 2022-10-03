@@ -20,7 +20,8 @@ function search(term) {
     error.innerHTML = searchData.length + " matches for '" + term + "'</br>";
     content.innerHTML = "";
     for (var i = 0; i < searchData.length; i++) {
-      content.innerHTML += `<div class="box"><a href="../post/${searchData[i].posturl}">${searchData[i].title}</a> <br></div>`
+      tags = expandTags(searchData[i].tags)
+      content.innerHTML += `<div class="box"><a href="../post/${searchData[i].posturl}">${searchData[i].title}</a> <span class="tags">${tags.join(", ")}</span > <br></div>`
     }
   } else {
     //error handeling.

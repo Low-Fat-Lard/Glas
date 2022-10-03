@@ -13,18 +13,9 @@
           <a href = "/">Back to home</a>
           <h1><%= title %></h1>
           <p><%= content %></p>
-          <div class="reply" id="reply">
-            <input type="text" placeholder="Post reply" id="reply">
-            <input type="button" class="create" value="📯" onclick="postMessage()" id="create" alt="create-new">
-            <b id="replynum">replies</b>
-            <div id="replies">
-            </div>
-          </div>
         </article>
       <%- include('../partials/footer'); %>
-      <script src="/socket.io/socket.io.js"></script>
       <script src="../js/main.js"></script>
-      <script src="../js/post.js"></script>
 </body>
 
 </html>

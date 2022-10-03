@@ -3,11 +3,13 @@
   {
     "title": ["Hello world"],
     "posturl": ["test"],
-    "content": ["My first blog post"]
+    "content": ["My first blog post"],
+    "tags": [2]
   },
   {
     "title": ["Hello world2"],
     "posturl": ["test2"],
-    "content": ["My first blog post2"]
+    "content": ["My first blog post2"],
+    "tags": [1]
   }
 ]
