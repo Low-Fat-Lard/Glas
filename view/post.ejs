@@ -7,15 +7,19 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload="init('<%= posturl %>')">
+<body onload ='encode("<%- content %>")'>
      <%- include('../partials/menu'); %>
         <article>
           <a href = "/">Back to home</a>
           <h1><%= title %></h1>
-          <p><%= content %></p>
+          <p style="white-space: pre-wrap" id="text"></p>
+          <img src="<%= image.url %>" alt="<%= image.alt %>" width="<%= image.width %>"height="<%= image.height %>">
+          <a href="https://glas.low-fat-lard.repl.co/quiz/<%= posturl %>">Take a test on <%= title %></a>
         </article>
       <%- include('../partials/footer'); %>
-      <script src="../js/main.js"></script>
+      <script src="../js/main.js"></script>      
+      <script src="../js/post.js"></script>
+      <script src="../js/achieve.js"></script>     
 </body>
 
 </html>

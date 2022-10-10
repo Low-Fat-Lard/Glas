@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+  <title>Glas - Quiz</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="post" onload="init('<%= term %>')">
+     <%- include('../partials/menu'); %>
+        <article>
+          <p id="number">1/9</p>
+          <h1 id="question">Question</h1>
+          <div id="submit">
+          </div>
+        </article>
+      <%- include('../partials/footer'); %>
+      <script src="../js/main.js"></script>
+      <script src="../js/achieve.js"></script>
+      <script src="../js/quiz.js"></script>
+</body>
+
+</html>

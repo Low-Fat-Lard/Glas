@@ -1,18 +1,23 @@
-const express = require('express')
+const express = require("express")
 const app = express()
-const http = require('http');
+const http = require("http");
 
 const server = http.Server(app);
 
 const path = require("path");
-const { writeFileSync, readFileSync } = require('fs');
-let loadPosts = () => JSON.parse(readFileSync('database.json'));
+const { writeFileSync, readFileSync } = require("fs");
+
+let loadPosts = () => JSON.parse(readFileSync("database.json"));
+let loadQuestions = () => JSON.parse(readFileSync("questions.json"));
+let loadAchieves = () => JSON.parse(readFileSync("achievements.json"));
 
 server.listen(3000, () => console.log(`Lisening on port :3000`))
 
 
 app.use(express.static(__dirname + "/view"));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
+
+
 //main page
 app.get("/", function(request, response) {
   response.render(path.join(__dirname + "/view/index.ejs"));
@@ -20,17 +25,38 @@ app.get("/", function(request, response) {
 app.get("/about", function(request, response) {
   response.render(path.join(__dirname + "/view/about.ejs"));
 })
+
+app.get("/quiz/:term", function(request, response) {
+  app.locals.term = request.params.term;
+  response.render(path.join(__dirname + "/view/quiz.ejs"));
+});
+app.get("/results", function(request, response) {
+  response.render(path.join(__dirname + "/view/results.ejs"));
+})
+
+app.get("/achievements", function(request, response) {
+  response.render(path.join(__dirname + "/view/achieve.ejs"));
+});
+
 //json
 app.get("/posts", function(request, response) {
   response.send(loadPosts());
 });
+app.get("/questions", function(request, response) {
+  response.send(loadQuestions());
+});
+app.get("/achieve", function(request, response) {
+  response.send(loadAchieves());
+});
+
 //search
 app.get("/search/:searchterm", function(request, response) {
   app.locals.term = request.params.searchterm;
   response.render(path.join(__dirname + "/view/search.ejs"));
 });
 //post
-app.get('/post/:posturl', (request, response) => {
+app.get("/post/:posturl", (request, response) => {
+
   postUrl = request.params.posturl;
   for (var i = 0; i < loadPosts().length; i++) {
     dbIndex = JSON.stringify(loadPosts()[i]).indexOf(postUrl);
@@ -38,16 +64,12 @@ app.get('/post/:posturl', (request, response) => {
       app.locals.title = loadPosts()[i].title;
       app.locals.content = loadPosts()[i].content;
       app.locals.posturl = loadPosts()[i].posturl;
+      if (loadPosts()[i].image) {
+        app.locals.image = loadPosts()[i].image;
+      } else {
+        app.locals.image = "";
+      }
     }
   }
-  if (dbIndex != -1) {
-    response.render(path.join(__dirname + "/view/post.ejs"));
-  } else {
-    //error
-    response.send('Page not found :(')
-  }
-});
-
-app.get("/achievements", function(request, response) {
-  response.send(loadReplies());
+  response.render(path.join(__dirname + "/view/post.ejs"));
 });

@@ -3,8 +3,8 @@
 var displayAmount = 7,
   jsonData = [],
   search = false,
-  tags = "";
-header = document.getElementById("header"),
+  tags = "",
+  header = document.getElementById("header"),
   error = document.getElementById("alert"),
   logo = document.getElementById("logo"),
   content = document.getElementById("content");
@@ -12,12 +12,10 @@ header = document.getElementById("header"),
 function expandTags(bits) {
   // for future use, add the numbers in hex together to add a tag. Having said that, the json maker should automaticly do the job
   let a = []
-  // mandatory
   if (bits & 0x1) a.push("grammar")
   if (bits & 0x2) a.push("vocab")
   if (bits & 0x4) a.push("reading")
   if (bits & 0x8) a.push("listening")
-  //non mandatory
   if (bits & 0x10) a.push("nouns")
   if (bits & 0x20) a.push("verbs")
   if (bits & 0x40) a.push("adjectives")

@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload="init('<%= term %>')">
+<body id="post" onload="init('<%= term %>')">
      <%- include('../partials/menu'); %>
         <article>
           <div class="modal">
@@ -15,6 +15,7 @@
           </div>
         </article>
       <%- include('../partials/footer'); %>
+      <script src="../js/achieve.js"></script>     
       <script src="../js/main.js"></script>
       <script src="../js/search.js"></script>
 </body>

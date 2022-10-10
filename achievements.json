@@ -1,0 +1,51 @@
+[
+  {
+    "name": ["In the aeroplane over the sea"],
+    "description": ["complete a lesson"],
+    "type": ["complete"],
+    "amount": 1,
+    "reward": ["You completed a lesson"]
+  },{
+    "name": ["Figure 8"],
+    "description": ["complete 8 lessons"],
+    "type": ["complete"],
+    "amount": 8,
+    "reward": ["You completed 8 lessons"]
+  },{
+    "name": ["Le jardin de Heavenly"],
+    "description": ["C is the heavenly option"],
+    "type": ["town"],
+    "amount": 100,
+    "reward": ["You completed 100 lessons"]
+  },{
+    "name": ["OK computer"],
+    "description": ["Score a perfect score"],
+    "type": ["perfect"],
+    "amount": 1,
+    "reward": ["You scored a perfect score"]
+  },{
+    "name": ["Blue"],
+    "description": ["Learn the colours"],
+    "type": ["colour"],
+    "amount": 1,
+    "reward": ["You learnt the colours"]
+  },{
+    "name": ["Nevermind"],
+    "description": ["Fail a test"],
+    "type": ["fail"],
+    "amount": 1,
+    "reward": ["You failed a test"]
+  },{
+    "name": ["Aneurysm"],
+    "description": ["Fail 10 times"],
+    "type": ["fail"],
+    "amount": 10,
+    "reward": ["You failed 10 times"]
+  },{
+    "name": ["Parklife"],
+    "description": ["Learn the names of places in towns"],
+    "type": ["town"],
+    "amount": 1,
+    "reward": ["You learnt the names of places in towns"]
+  }
+]
