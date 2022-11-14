@@ -7,7 +7,8 @@ var displayAmount = 7,
   header = document.getElementById("header"),
   error = document.getElementById("alert"),
   logo = document.getElementById("logo"),
-  content = document.getElementById("content");
+  content = document.getElementById("content"),
+  preloader = document.querySelector('.preloader');
 
 function expandTags(bits) {
   // for future use, add the numbers in hex together to add a tag. Having said that, the json maker should automaticly do the job
@@ -23,7 +24,6 @@ function expandTags(bits) {
   if (bits & 0x100) a.push("irregular")
   if (bits & 0x200) a.push("regular")
   if (bits & 0x400) a.push("excersise")
-  console.log(a);
   return a;
 }
 //Using the Update function for absolute Garbage.
@@ -48,3 +48,6 @@ input.addEventListener("keyup", (event) => {
     window.location.assign("https://glas.low-fat-lard.repl.co/search/" + input.value)
   }
 });
+window.addEventListener('load', () => {
+   preloader.style.display = "none";
+})
