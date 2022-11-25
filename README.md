@@ -1,5 +1,6 @@
 # Glas
 Glas - An ineractive Irish learning website
+## About
 ## Main Features
 ### Users
 - The users are saved in a JSON file, using the Node Passport plugin. The password gets encoded, so it should be fine security wise. 
