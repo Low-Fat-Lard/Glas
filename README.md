@@ -12,3 +12,7 @@ Glas - An ineractive Irish learning website
 - Tests pull a random quiz type, at the moment "muti-choice" and "text-input"
 ### Games
 - You can play hangman and a colour matching game. Will add more.
+## Update Log
+- [x] Make site mobile friendly
+- [ ] Update the website
+- [ ] Add more items
