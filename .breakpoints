@@ -1,5 +1,13 @@
 {
   "files": {
+    "views/index.ejs": [
+      {
+        "id": "45d3f9e0-0855-4f49-9d54-00011c145d35",
+        "line": 16,
+        "version": 552,
+        "index": 453
+      }
+    ],
     "views/post.ejs": [
       {
         "id": "728f013b-b0b8-42e7-afa4-46729eb5cb5d",

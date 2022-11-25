@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+  <title>Glas - Quiz</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body id="post" onload="results()">
+     <%- include('../partials/menu'); %>
+        <article>
+          <div id="results">
+          </div>
+          <br>
+          <button onclick="replay()">Replay</button>
+          <button onclick="next()">Next</button>
+        </article>
+      <%- include('../partials/footer'); %>
+      <script src="../js/main.js"></script>
+      <script src="../js/achieve.js"></script>
+      <script src="../js/results.js"></script>
+</body>
+
+</html>

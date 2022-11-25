@@ -1,0 +1,51 @@
+[
+  {
+    "type": ["choice"],
+    "question": ["What is the word for 'I' in Irish"],
+    "posturl": ["pronouns"],
+    "questions": ["mé", "tú", "sé", "sinn"],
+    "correct": [1]
+  },
+  {
+    "type": ["choice"],
+    "question": ["Translate 'muid' into English"],
+    "posturl": ["pronouns"],
+    "questions": ["you", "I", "we", "she"],
+    "correct": [3]
+  },
+  {
+    "type": ["choice"],
+    "question": ["Translate 'Is duine ard mé' into English"],
+    "posturl": ["copula"],
+    "questions": ["I am a tall person", "My name is ard"],
+    "correct": [1]
+  },
+  {
+    "type": ["choice"],
+    "question": ["Translate 'Is duine faiteach í' into English"],
+    "posturl": ["copula"],
+    "questions": ["She is fatal", "She is a shy person"],
+    "correct": [2]
+  },
+    {
+    "type": ["choice"],
+    "question": ["Translate 'Is duine faiteach í' into English"],
+    "posturl": ["irregular"],
+    "questions": ["She is fatal", "She is a shy person"],
+    "correct": [2]
+  },
+    {
+    "type": ["choice"],
+    "question": ["Translate 'Is duine faiteach í' into English"],
+    "posturl": ["irregular"],
+    "questions": ["She is fatal", "She is a shy person"],
+    "correct": [2]
+  },
+    {
+    "type": ["choice"],
+    "question": ["Translate 'Is duine faiteach í' into English"],
+    "posturl": ["irregular"],
+    "questions": ["She is fatal", "She is a shy person"],
+    "correct": [2]
+  }
+]

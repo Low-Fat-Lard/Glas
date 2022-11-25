@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	display: flex;
+	height: 100%;
+	line-height: 150%;
+	justify-content: center;
+}
+.label {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	display: block;
+	margin-bottom: 8px;
+}
+.preloader {
+  align-items: center;
+  background: #FFF;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.2s linear;
+  width: 100%;
+  z-index: 9999;
+  opacity: 1;
+  transform: opacity 1s linear;
+}
+input {
+	border: 1px solid rgba(0, 0, 0, 0.95);
+	height: 48px;
+	line-height: 48px;
+	padding: 0 16px;
+	border-radius: 0;
+	background: #fff;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	font-size: 14px;
+	line-height: 20px;
+	width: 100%;
+	letter-spacing: 0.5px;
+}
+input:focus{
+	outline: none;
+}
+input .label {
+	margin: 0 auto 8px;
+}
+section {
+	width: 80%;
+}
+h1 {
+	font-size: 1.75rem;
+	margin: 0 0 0.75rem 0;
+}
+article {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	padding: 1rem;
+	transform: translate(-50%, 0%);
+}
+.left-half {
+	float: left;
+	width: 30%;
+	padding: 10px;
+	border-right: 1px solid black;
+}
+.right-half {
+	padding: 10px;
+	float: left;
+	width: 70%;
+}
+a {
+	color: green;
+	box-shadow: green 0px -2px 0px -1px inset;
+	display: inline-block;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out 0s;
+	padding: 0px 3px;
+}
+a:hover {
+	box-shadow: green 0px -25px 0px 0px inset;
+	color: rgb(255, 255, 255);
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+}
+.achieve {
+	background-color: rgb(238, 255, 238);
+	border-radius: 5px;
+	padding: 10px;
+}
+.link {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 10px;
+	color: rgb(255, 255, 255);
+	height: 48px;
+	width: 100%;
+	padding: 11px;
+	border-width: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.95);
+}
+button {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	color: rgb(255, 255, 255);
+	height: 48px;
+	width: 45%;
+	padding: 11px;
+	border-width: 0px;
+	border-radius: 0px;
+	background: rgba(0, 0, 0, 0.95);
+}
+button:hover{
+	cursor: pointer;
+}
+.keyword {
+	background-color: rgb(238, 255, 238);
+	border-radius: 5px;
+	padding: 10px;
+}
+.tags {
+	color: gray;
+	float: right;
+	margin-top: 23px;
+}
+progress {
+	border-radius: 10em;
+	width: 100%;
+	height: 10px;
+}
+progress::-webkit-progress-bar {
+	background-color: rgb(200, 255, 200);
+	border-radius: 7px;
+}
+progress::-webkit-progress-value {
+	background-color: rgb(0, 200, 0);
+	border-radius: 7px;
+}
+progress::-moz-progress-bar {
+	background-color: rgb(100, 255, 100);
+	width: 100%;
+	border-radius: 7px;
+}
+.box{
+	height: 50px;
+	border-bottom: 1px solid black;
+	transition: 1s;
+}
+.box a {
+	box-shadow: none;
+	color: black;
+	padding: 25px;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+	box-shadow: none;
+}
+.box a::before {
+	content: " ";
+	margin-left: -25px;
+}
+img {
+	display: block;
+	height: auto;
+	max-height: 8em;
+	max-width: 10em;
+	min-height: 3em;
+	min-width: 3em;
+	width: auto;
+	image-rendering: pixelated;
+}
+.logo:hover {
+	cursor: pointer;
+}
+/*achievement stuff*/
+.game_achievement {
+    position: fixed;
+	transition: 300ms;
+	background: rgb(000, 000, 000);
+    bottom: 0px;
+    right: 0px;
+    z-index: 100;
+    transform: translateY(100%);
+	padding: 23px 40px 20px 40px;
+}
+.game_achievement.active{
+    transform: translateY(0%);
+}
+.game_achievement h3 {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgb(200, 255, 200);
+}
+.game_achievement__name {
+    color: white;
+	font-size: 22px;
+}
+.game_achievement__description {
+	font-size: 16px;
+	color: #607a81;
+	line-height: 18px;
+}
+.achievement {
+	background: rgb(200, 255, 200);
+	height: 65px;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 10px
+}
+
+.description {
+	float: right;
+}
+.danger{
+	background: rgb(255, 100, 100)
+}
