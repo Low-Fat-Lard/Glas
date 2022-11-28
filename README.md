@@ -1,5 +1,5 @@
 # Glas
-Glas - An ineractive Irish learning website
+🇮🇪 Glas - An ineractive Irish learning website 🇮🇪
 ## Table of Contents
 1. [About](#about)
 2. [Main Features](#main-features)
