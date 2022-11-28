@@ -1,10 +1,10 @@
 # Glas
 Glas - An ineractive Irish learning website
 ## Table of Contents
-1. [About](##about)
-2. [Main Features](##main-features)
-3. [Update Log](##update-log)
-4. [Special Thanks](##special-thanks)
+1. [About](#about)
+2. [Main Features](#main-features)
+3. [Update Log](#update-log)
+4. [Special Thanks](#special-thanks)
 ## About
 Glas was a very poor attemt to fix the bad sides of Duoligo. It gives you a detailed description of the topic. One of the things that I didn't like about the Duolingo system was the way it didn't show how you got your question wrong, so I tried my best so the experience feels like reading a book. Having said that, it's VERY bad. I guess it was too ambitious for a teenager to tackle on a multi-billion dollar co-operation. It's still open source if you want it, though. I'm thinking about paying repl so it doesn't take hours for the page to load. [Link to Website](https://glas.low-fat-lard.repl.co)
 ## Main Features
