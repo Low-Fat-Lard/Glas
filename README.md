@@ -43,37 +43,38 @@ The [Database](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/databa
 ```json
 [
   {
-    "title": [""],[^2]
-    "posturl": [""],[^3]
-    "content": [""],[^4]
-    "tags": [""],[^5]
+    "title": [""],
+    "posturl": [""],
+    "content": [""],
+    "tags": [""],
   }
 ]
 ```
-
+[^2][^3][^4][^5]
 ### Achievement.JSON
 The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/achievements.json) JSON file is made to be as simple as possible, by only using the name and description. To trigger it, just put a `completeAchievement` function in the code, where you want it to be triggered, and put the achievement name in string[^6] form.
 ```json
 [
   {
-    "name": [""],[^6]
-    "description": [""][^7]
+    "name": [""],
+    "description": [""]
   }
 ]
 ```
-
+[^6][^7]
 ### Questions.JSON
 The [Questions](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/questions.json) JSON file is.... Drum roll please.... FOR THE QUIZES! who could have guessed . 
 ```json
 [
   {
-    "question": [""],[^8]
-    "posturl": [""],[^9]
-    "questions": ["", "", "", ""],[^10]
-    "correct": [],[^11]
+    "question": [""],
+    "posturl": [""],
+    "questions": ["", "", "", ""],
+    "correct": [],
   }
 ]
 ```
+[^8][^9][^10][^11]
 I don't even know why I'm putting this much effort for something no one is going to see. lol.
 
 ## Footnotes
