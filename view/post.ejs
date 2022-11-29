@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body onload ='encode("<%- content %>")'>
+<body onload ='encode("<%- content %>","<%= title %>")'>
      <%- include('../partials/menu'); %>
         <article>
           <a href = "/">Back to home</a>
           <h1><%= title %></h1>
+          <% console.log(title) %>
           <p style="white-space: pre-wrap" id="text"></p>
           <img src="<%= image.url %>" alt="<%= image.alt %>" width="<%= image.width %>"height="<%= image.height %>">
-          <a href="https://glas.low-fat-lard.repl.co/quiz/<%= posturl %>">Take a test on <%= title %></a>
+          <div id="link">
+              <a class="link" href="https://glas.low-fat-lard.repl.co/quiz/<%= posturl %>">Take a test on <%= title %></a>
+          </div>    
         </article>
       <%- include('../partials/footer'); %>
       <script src="../js/main.js"></script>      

@@ -1,6 +1,7 @@
 <section class="container">
+    <button id="navButton" class="nav"onclick="navigate()">☰</button>
     <div class="preloader">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="spinner">
+      <div class="loading-spinner"></div>
     </div>
     <div class='game_achievement' id="achievement">
     <div>
@@ -12,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="left-half">
+  <div class="left-half" id="left">
     <article>
     <div class="header">
       <h1 class="logo" id="logo">Glas</h1>
@@ -22,17 +23,20 @@
       <a class="link" href="https://glas.low-fat-lard.repl.co/">Home</a><br>
       <a class="link" href="https://glas.low-fat-lard.repl.co/about">About</a><br>
       <a class="link" href="https://glas.low-fat-lard.repl.co/achievements">Achievements</a>
+
       <p>Key Words</p>
       <div class="keyword">
         <a href="https://glas.low-fat-lard.repl.co/search/verb">Verbs</a><br>
         <a href="https://glas.low-fat-lard.repl.co/search/noun">Nouns</a><br>
-        <a href="https://glas.low-fat-lard.repl.co/search/noun">Grammar</a>
+        <a href="https://glas.low-fat-lard.repl.co/search/grammar">Grammar</a>
       </div>
       <p>Next Achievement</p>
+     <a class="next" href="https://glas.low-fat-lard.repl.co/achievements">
       <div class="achieve">
         <label><strong id="label"></strong></label>
         <div id="achieve"></div>
       </div>
+     </a>
     </div>
     </article>
   </div>

@@ -1,51 +1,134 @@
 [
   {
-    "type": ["choice"],
     "question": ["What is the word for 'I' in Irish"],
     "posturl": ["pronouns"],
     "questions": ["mé", "tú", "sé", "sinn"],
     "correct": [1]
   },
   {
-    "type": ["choice"],
     "question": ["Translate 'muid' into English"],
     "posturl": ["pronouns"],
     "questions": ["you", "I", "we", "she"],
     "correct": [3]
   },
   {
-    "type": ["choice"],
     "question": ["Translate 'Is duine ard mé' into English"],
     "posturl": ["copula"],
     "questions": ["I am a tall person", "My name is ard"],
     "correct": [1]
   },
   {
-    "type": ["choice"],
     "question": ["Translate 'Is duine faiteach í' into English"],
     "posturl": ["copula"],
     "questions": ["She is fatal", "She is a shy person"],
     "correct": [2]
   },
     {
-    "type": ["choice"],
-    "question": ["Translate 'Is duine faiteach í' into English"],
+    "question": ["Translate 'Abair' into English"],
     "posturl": ["irregular"],
-    "questions": ["She is fatal", "She is a shy person"],
+    "questions": ["say", "catch", "be", "make/do"],
+    "correct": [1]
+  },
+    {
+    "question": ["What is the word for 'to come' in Irish"],
+    "posturl": ["irregular"],
+    "questions": ["Faigh", "Tar", "Teigh", "Tabhair"],
     "correct": [2]
   },
     {
-    "type": ["choice"],
-    "question": ["Translate 'Is duine faiteach í' into English"],
+    "question": ["What is the word for 'to eat' in Irish"],
     "posturl": ["irregular"],
-    "questions": ["She is fatal", "She is a shy person"],
-    "correct": [2]
+    "questions": ["Ith", "Feic"],
+    "correct": [1]
   },
     {
-    "type": ["choice"],
-    "question": ["Translate 'Is duine faiteach í' into English"],
+    "question": ["What is the word for 'to go' in Irish"],
     "posturl": ["irregular"],
-    "questions": ["She is fatal", "She is a shy person"],
+    "questions": ["Ith", "Feic", "Teigh","Tabhair"],
+    "correct": [3]
+  },    
+    {
+    "question": ["What is the word for 'to give' in Irish"],
+    "posturl": ["irregular"],
+    "questions": ["Ith", "Feic", "Teigh","Tabhair"],
+    "correct": [4]
+  },    
+    {
+    "question": ["What is the word for 'to get' in Irish"],
+    "posturl": ["irregular"],
+    "questions": ["Feic", "Tar", "Faigh","Tabhair"],
+    "correct": [3]
+  },
+    {
+    "question": ["Translate 'Feic' into English"],
+    "posturl": ["irregular"],
+    "questions": ["Eat", "See", "Fake","Make/Do"],
     "correct": [2]
+  },{
+    "question": ["Translate 'Make/do' into Irish"],
+    "posturl": ["irregular"],
+    "questions": ["Déan", "Feic", "Tabhair", "Faigh"],
+    "correct": [1]
+  },{
+    "question": ["Translate 'Bí' into English"],
+    "posturl": ["irregular"],
+    "questions": ["Be", "See", "Fake","Make/Do"],
+    "correct": [1]
+  },{
+    "question": ["Glas"],
+    "posturl": ["colours"],
+    "correct": ["green"]
+  },{
+    "question": ["Oráiste"],
+    "posturl": ["colours"],
+    "correct": ["orange"]
+  },{
+    "question": ["Bándearg"],
+    "posturl": ["colours"],
+    "correct": ["pink"]
+  },{
+    "question": ["Dearg"],
+    "posturl": ["colours"],
+    "correct": ["red"]
+  },{
+    "question": ["Gorm"],
+    "posturl": ["colours"],
+    "correct": ["blue"]
+  },{
+    "question": ["Buí"],
+    "posturl": ["colours"],
+    "correct": ["yellow"]
+  },{
+    "question": ["Corcra"],
+    "posturl": ["colours"],
+    "correct": ["purple"]
+  },{
+    "question": ["Donn"],
+    "posturl": ["colours"],
+    "correct": ["brown"]
+  },{
+    "question": ["Liath"],
+    "posturl": ["colours"],
+    "correct": ["gray"]
+  },{
+    "question": ["Translate 'Bí' into English"],
+    "posturl": ["towns"],
+    "questions": ["Be", "See", "Fake","Make/Do"],
+    "correct": [1]
+  },{
+    "question": ["Translate 'Bí' into English"],
+    "posturl": ["towns"],
+    "questions": ["Be", "See", "Fake","Make/Do"],
+    "correct": [1]
+  },{
+    "question": ["Translate 'Bí' into English"],
+    "posturl": ["towns"],
+    "questions": ["Be", "See", "Fake","Make/Do"],
+    "correct": [1]
+  },{
+    "question": ["Translate 'Bí' into English"],
+    "posturl": ["irregular"],
+    "questions": ["Be", "See", "Fake","Make/Do"],
+    "correct": [1]
   }
 ]

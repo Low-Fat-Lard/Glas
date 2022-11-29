@@ -33,7 +33,6 @@ function updateAchievements() {
 }
 
 function completeAchievement(name) {
-    console.log(name);
     achieveData.forEach(function(a) {
 
         if (a.name == name) {
@@ -48,8 +47,6 @@ function completeAchievement(name) {
                     achieveData[achieveData.indexOf(a)] = targetAchievement;
                     document.getElementById("achievement").classList.remove("active");
                 }, 3500)
-            } else {
-                console.warn("ERROR")
             }
             updateAchievements();
             draw();
