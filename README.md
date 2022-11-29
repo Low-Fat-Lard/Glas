@@ -52,7 +52,7 @@ The [Database](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/databa
 ```
 [^2][^3][^4][^5]
 ### Achievement.JSON
-The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/achievements.json) JSON file is made to be as simple as possible, by only using the name and description. To trigger it, just put a `completeAchievement` function in the code, where you want it to be triggered, and put the achievement name in string[^6] form.
+The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/achievements.json) JSON file is made to be as simple as possible, by only using the name and description. To trigger it, just put a `completeAchievement` function in the code, where you want it to be triggered, and put the achievement name in string[^12] form.
 ```json
 [
   {
@@ -85,10 +85,12 @@ Special Thanks to : My Irish Teacher, H.A. and S.W.J.
 [^2]: Post title. This will be displayed in the main page.
 [^3]: Post URL can be changed through here. Make sure to use a term not used before, or else the whole thing falls to pieces.
 [^4]: Post content. Does exactly what it says on the tin.
-[^5]: Achievement Name
-[^6]: [strings](https://www.w3schools.com/js/js_string_methods.asp)
+[^5]: Post Tag. Oof
+[^6]: Achievement Name
 [^7]: Achievement Description
 [^8]: Question
 [^9]: URL for the quiz.
 [^10]: If you want to add more questions, just add more strings.
 [^11]: Correct answer. Answer in number form, except for when it's colour mode, where you type in a string. (E.g. [1] selects the first question element.)
+[^12]: [strings](https://www.w3schools.com/js/js_string_methods.asp)
+
