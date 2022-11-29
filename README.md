@@ -13,7 +13,7 @@ Dia Dhaoibh! Glas was a very poor attemt to fix the bad sides of Duoligo. It giv
 
 ## Main Features
 |Feature|Explanation
-| ------------- |:-------------:|
+| ------------- | ------------- |
 | Users |The users are saved in a JSON file, using the Node Passport plugin. The password gets encoded, so it should be fine security wyse.|
 | Achievements | Achievements are saved onto `LocalStorage`[^1], where they are put into JSON format. They are all names of Albums I like. Give them a listen!|
 | Posts | A clean blog system with it's own programming language, similar to markdown.|
