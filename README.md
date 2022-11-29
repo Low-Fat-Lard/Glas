@@ -40,7 +40,7 @@ The whole system works with a series of JSON files, by using the Javascript `fet
 
 ### Database.JSON
 The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/database.json) JSON file is the main JSON file used in the website. It's nothing but a blog framework. Just make sure to make a quiz that matches it. The tags use base 16 encoding. Good luck figuring that one out. *Hint: try looking into the [Main.js](https://github.com/Low-Fat-Lard/Glas/blob/main/public/js/main.js) file*
-```
+```javascript
 [
   {
     "title": [""], // Post title. This will be displayed in the main page.
@@ -53,7 +53,7 @@ The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/dat
 
 ### Achievement.JSON
 The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/achievements.json) JSON file is made to be as simple as possible, by only using the name and description. To trigger it, just put a `completeAchievement` function in the code, where you want it to be triggered, and put the achievement name in [string](https://www.w3schools.com/js/js_strings.asp) form.
-```
+```javascript
 [
   {
     "name": [""], // Achievement Name
@@ -64,7 +64,7 @@ The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/ach
 
 ### Questions.JSON
 The [Questions](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/questions.json) JSON file is.... Drum roll please.... FOR THE QUIZES! who could have guessed . 
-```
+```javascript
 [
   {
     "question": [""], //Question
