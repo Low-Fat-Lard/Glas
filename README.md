@@ -66,7 +66,7 @@ The [Questions](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/quest
 ]
 ```
 [^8][^9][^10][^11]
-I don't even know why I'm putting this much effort for something no one is going to see. lol.
+> I don't even know why I'm putting this much effort for something no one is going to see. lol.
 
 ## Footnotes
 ### Special thanks
