@@ -18,7 +18,7 @@ Dia Dhaoibh! Glas was a very poor attemt to fix the bad sides of Duoligo. It giv
 | Achievements | Achievements are saved onto `LocalStorage`[^1], where they are put into JSON format. They are all names of Albums I like. Give them a listen!|
 | Posts | A clean blog system with it's own programming language, similar to markdown.|
 | Tests | Tests pull a random quiz type, at the moment "muti-choice" and "text-input"|
-| Realitively Good CSS | I know nothing about front-end. I tried my best to make it responsive.|
+| Realitively Good CSS | I know nothing about front-end. I tried my best to make it responsive. (I am planning to make it easier on the eyes in the future)|
 | Games | You can play hangman and a colour matching game. Will add more.|
 
 ## Update Log
@@ -30,7 +30,7 @@ Dia Dhaoibh! Glas was a very poor attemt to fix the bad sides of Duoligo. It giv
 The whole system works with a series of JSON files, by using the Javascript `fetch()` funciton. Here is how they are all made, for the non existant people that want to work on my website. I also added square brackets to all of them, which made it harder to work with, but easier to look at, in my opinion. The descrption of the tags are in an about element. I understand it looks bad, but unfortunately, comments are illegal in JSON. 
 
 ### Database.JSON
-The [Database](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/database.json) JSON file is the main JSON file used in the website. It's nothing but a blog framework. Just make sure to make a quiz that matches it. The tags use base 16 encoding. Good luck figuring that one out. *Hint: try looking into the [Main.js](https://github.com/Low-Fat-Lard/Glas/blob/main/public/js/main.js) file*
+The [Database](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/database.json) JSON file is the main JSON file used in the website. It's nothing but a blog framework. Just make sure to make a quiz that matches it. The tags use base 16 encoding. (I might make this entirely in MarkDown) Good luck figuring that one out. *Hint: try looking into the [Main.js](https://github.com/Low-Fat-Lard/Glas/blob/main/public/js/main.js) file*
 ```json
 [
   {
