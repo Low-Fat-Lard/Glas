@@ -1,4 +1,5 @@
 This table provides each basic Irish colour with its English translation. Take a look below: 
+
 | Irish | English |
 | ----------- | ----------- |
 | Dearg | Red |
