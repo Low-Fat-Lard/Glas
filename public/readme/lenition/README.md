@@ -2,11 +2,11 @@ Masculine words (usually words ending in broad vowels, or professions for exampl
 
 - When putting 'the' in front of a masculine word beginning with a consonant, there is no change to the word, for example, an madra.
 
-- When putting 'the' in front of a masculine word beginning with a vowel, a t- is put in front, for example, an t-úrlár.
+- When putting 'the' in front of a masculine word beginning with a vowel, a **t-** is put in front, for example, an t-úrlár.
 
 - When describing a masculine word, there is no change to the adjective, for example, an fear bocht.
 
-- When writing the tiseal ginideach of a masculine word, you write the noun, then an, and the second noun with a h and in most cases a slightly different spelling, for example oifig an phoist.
+- When writing the *Tiseal Ginideach* (TG) of a masculine word, you write the noun, then an, and the second noun with a h and in most cases a slightly different spelling, for example oifig an phoist.
 
 NOTE - there is no need to write "an oifig an phoist" as the 'the' is already there before "phoist".
 
@@ -16,11 +16,11 @@ NOTE - certain phrases do not have the "the" in the middle of the phrase, such a
 
 Feminine words (usually words ending in slender vowels, and words ending in "-e/ach", "e/acht" etc, eg an fhírinne, an bháisteach)
 
-- When putting 'the' in front of a feminine word beginning with a consonant, a h is added after the first letter, for example, an chistin.
+- When putting 'the' in front of a feminine word beginning with a consonant, a **h** is added after the first letter, for example, an chistin.
 
 - When putting 'the' in front of a feminine word beginning with a vowel, there is no change to the word, for example, an óige.
 
-- When putting 'the' in front of a feminine word beginning with s, a t is added to the beginning of the word, for example, an tsaotharlann.
+- When putting 'the' in front of a feminine word beginning with s, a **t** is added to the beginning of the word, for example, an tsaotharlann.
 
 - When describing a feminine word, a h is added after the first letter of the adjective, for example, an chathair mhór.
 
