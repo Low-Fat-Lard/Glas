@@ -1,0 +1,3 @@
+## DNTLS
+One of the trickier exceptions to the normal lenition rules is the infamous "dentals-dots rule": if you have a d, t, or s (the consonants in "dots") which would be lenited, but the letter before it is one of d, n, t, l, or s (the consonants in "dentals"), you don't lenite it after all. Example an stráid = the street - you'd probably think to write an shtráid since a feminine genitive noun after the article is normally lenited[1], but the dentals-dots rule overrides that. It's worth noting, however, that this rule does not apply to lenition of attributive adjectives. For example grian the = hot sun.
+## 
