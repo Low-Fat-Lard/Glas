@@ -27,21 +27,11 @@ Dia Dhaoibh! Glas was a very poor attemt to fix the bad sides of Duoligo. It giv
 - [ ] Add more items
 
 ## Backend
-The whole system works with a series of JSON files, by using the Javascript `fetch()` funciton. Here is how they are all made, for the non existant people that want to work on my website. I also added square brackets to all of them, which made it harder to work with, but easier to look at, in my opinion. The descrption of the tags are in an about element. I understand it looks bad, but unfortunately, comments are illegal in JSON. 
+The whole system works with a series of JSON files, by using the Javascript `fetch()` funciton. Here is how they are all made, for the non existant people that want to work on my website. I also added square brackets to all of them, which made it harder to work with, but easier to look at, in my opinion. The descrption of the tags are in an about element. I understand it looks bad, but unfortunately, comments are illegal in JSON. The main database uses a headless cms, and pulls all of the data from the datocms website. This makes everything incredibly easy to edit. I used a read-only token, but if I really was smart enough, I could have added an in-site article editor
 
-### Database.JSON
-The [Database](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/database.json) JSON file is the main JSON file used in the website. It's nothing but a blog framework. Just make sure to make a quiz that matches it. The tags use base 16 encoding. (I might make this entirely in MarkDown) Good luck figuring that one out. *Hint: try looking into the [Main.js](https://github.com/Low-Fat-Lard/Glas/blob/main/public/js/main.js) file*
-```json
-[
-  {
-    "title": [""],
-    "posturl": [""],
-    "content": [""],
-    "tags": [""],
-  }
-]
-```
-[^2][^3][^4][^5]
+### Database
+The database uses a datocms headless cms. It's made so it's as easy as pie. If anyone wants to access it and edit the code, just ask me through reddit or github.
+It has about 6 properties including the post title[^2], URL[^3], content(in markdown)[^4], and tags[^5].
 ### Achievement.JSON
 The [achievement](https://github.com/Low-Fat-Lard/Glas/blob/main/public/json/achievements.json) JSON file is made to be as simple as possible, by only using the name and description. To trigger it, just put a `completeAchievement` function in the code, where you want it to be triggered, and put the achievement name in string[^12] form.
 ```json
@@ -76,7 +66,7 @@ Special Thanks to : My Irish Teacher, H.A. and S.W.J.
 [^2]: Post title. This will be displayed in the main page.
 [^3]: Post URL can be changed through here. Make sure to use a term not used before, or else the whole thing falls to pieces.
 [^4]: Post content. Does exactly what it says on the tin.
-[^5]: Post Tag. Oof
+[^5]: Post Tags. this is an external link to another datocms block. 
 [^6]: Achievement Name
 [^7]: Achievement Description
 [^8]: Question
