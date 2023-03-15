@@ -2,22 +2,55 @@
 <html lang="en">
 <head>
     <%- include('../partials/head'); %>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
     <title>Glas - Home</title>
 </head>
 
 <body>
-    <%- include('../partials/menu'); %>
-        <article>
-          <div class="modal">
-              <div class="scroll-to-top">
-                  <input type="button" class="create" value="🏔️" id="top" alt="create-new">
-              </div>
-              <div id="content">
-              </div>
+    <div class="content">
+      <%- include('../partials/menu'); %>
+
+        <div class="grids">
+
+          <div class="tags">
+            🏷️ Tags
+            <ul class="tagging" id="tags">
+                  <li active="true" onclick="clickHandle('All')" class="tag">All Tags</li>
+          <!--    <li  onclick="clickHandle(this.innerHTML)" class="tag">Tags</li> -->
+            </ul>
           </div>
-        </article>
-      <%- include('../partials/footer'); %>
+          <div class="posts">
+            🔎 Search
+            <input type="text" id="search" class="search" onkeyup="searchPost()" placeholder="search keyword.." ></input>
+            <div id="content"></div>
+          </div>
+          <div class="profile">
+            🏅 Lessons
+            <ul class="mistakes">
+              <h3>📜 Mistakes (<span id="mistakes">0</span>)</h3>
+              Revise your mistakes
+              <a href="https://glas.low-fat-lard.repl.co/quiz/practice" id="link" class="link">
+                  Start Revising
+              </a>
+            </ul>
+            <ul class="mistakes">
+              <h3>📝 Practice Tests</h3>
+              Practice a random lesson.
+              <a href="https://glas.low-fat-lard.repl.co/post/random" class="link">
+                  Start Practicing
+              </a>
+            </ul>
+            <ul class="mistakes">
+              <h3>🏆 Achievments</h3>
+              <span>You have unlocked <span id="achievements">0</span> achievements.</span>
+              <a href="https://glas.low-fat-lard.repl.co/achievements" class="link">
+                  View Achievements
+              </a>
+            </ul>
+          </div>
+        </div>
+    </div>
       <script src="js/main.js"></script>
       <script src="js/home.js"></script>
       <script src="js/achieve.js"></script>

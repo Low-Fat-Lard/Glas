@@ -111,24 +111,24 @@
     "posturl": ["colours"],
     "correct": ["gray"]
   },{
-    "question": ["Translate 'Bí' into English"],
-    "posturl": ["towns"],
-    "questions": ["Be", "See", "Fake","Make/Do"],
-    "correct": [1]
+    "question": ["What is (I'm with) in Irish"],
+    "posturl": ["prepositional-pronouns"],
+    "questions": ["Linn", "Leo", "Leat","Liom"],
+    "correct": [4]
   },{
-    "question": ["Translate 'Bí' into English"],
-    "posturl": ["towns"],
-    "questions": ["Be", "See", "Fake","Make/Do"],
-    "correct": [1]
+    "question": ["Translate 'Agam' into English"],
+    "posturl": ["prepositional-pronouns"],
+    "questions": ["They have", "I have", "We have", "He has"],
+    "correct": [2]
   },{
-    "question": ["Translate 'Bí' into English"],
-    "posturl": ["towns"],
-    "questions": ["Be", "See", "Fake","Make/Do"],
-    "correct": [1]
+    "question": ["Translate 'I bought' into Irish"],
+    "posturl": ["past-tense"],
+    "questions": ["D'ceannaigh mé", "cheannaigh mé", "ceannaigh mé","cheannaíomar mé"],
+    "correct": [2]
   },{
-    "question": ["Translate 'Bí' into English"],
-    "posturl": ["irregular"],
-    "questions": ["Be", "See", "Fake","Make/Do"],
+    "question": ["Translate 'We threw/wore/spent' into Irish"],
+    "posturl": ["past-tense"],
+    "questions": ["chaitheamar", "caithamar", "caitheamar", "chaithamar"],
     "correct": [1]
   }
 ]

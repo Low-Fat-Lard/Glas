@@ -4,28 +4,30 @@
 <head>
   <%- include('../partials/head'); %>
   <title>Glas - Quiz</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/quiz.css">
 </head>
-
 <body id="post" onload="init('<%= term %>')">
+    <div class="content">
      <%- include('../partials/menu'); %>
-        <article id="quiz">
+        <div class="quiz" id="quiz">
           <p id="number">1/9</p>
-          <h1 id="question">Question</h1>
+          <h1 class="question" id="question">Question</h1>
           <div id="submit">
           </div>
-        </article>
-        <article id="result">
+        </div>
+        <div class="result" id="result">
           <div id="results">
           </div>
           <br>
           <button id="replay" onclick="replay()">Replay</button>
           <button id="next" onclick="next()">Next</button>
-        </article>
-      <%- include('../partials/footer'); %>
-      <script src="../js/main.js"></script>
-      <script src="../js/achieve.js"></script>
-      <script src="../js/quiz.js"></script>
+        </duv>
+    </div>
+    <%- include('../partials/footer'); %>
+    <script src="../js/main.js"></script>
+    <script src="../js/achieve.js"></script>
+    <script src="../js/quiz.js"></script>
 </body>
 
 </html>

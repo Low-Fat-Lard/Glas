@@ -10,7 +10,7 @@ var questionAmount = 7,
     assist = ["á", "é", "í", "ó", "ú"],
     types = ["choice", "text"], //main quiz types
     specialType = "", //one off quiz types
-    colours = ["red", "yellow", "orange", "green", "pink", "blue", "purple", "black", "white"],
+    colours = ["red", "yellow", "orange", "green", "pink", "blue", "purple", "black"],
     randomColour = "green",
     correctColour = 1,
     type = Math.floor(Math.random() * types.length),
@@ -27,11 +27,28 @@ function init(url) {
 }
 //Loads questions
 function load(url) {
-    for (var i = 0; i < questionData.length; i++) {
-        if (String(questionData[i].posturl) == url) {
-            question.push(questionData[i]);
+    if (url == "practice") {
+        completeAchievement("Summerteeth");
+        var mistakes = JSON.parse(localStorage.getItem("mistakes"));
+        for (var i = 0; i < questionData.length; i++) {
+            for (var l = 0; l < mistakes.length; l++) {
+                if (JSON.stringify(mistakes[l][0]) == JSON.stringify(questionData[i].question)) {
+                    question.push(questionData[i]);
+                }
+            }
+            
         }
+    } else {
+        if(url == "colours") {
+            completeAchievement("Blue");
+        }
+        for (var i = 0; i < questionData.length; i++) {
+            if (String(questionData[i].posturl) == url) {
+                    question.push(questionData[i]);
+                }
+            }
     }
+    console.log(question)
     checkType(url);
 }
 //Checks type
@@ -86,6 +103,7 @@ function loadText(question) {
     enter.addEventListener("click", (function(event) {
         wrong = true;
         check();
+        wrong = false;
     }));
     submit.appendChild(enter);
     for (var i = 0; i < assist.length; i++) {
@@ -134,49 +152,44 @@ function check(select) {
     console.log(disabled);
     if (!disabled) {
         if (selected == question[currentQuestion].correct || types[type] == "text" && selected.toLowerCase() == question[currentQuestion].questions[question[currentQuestion].correct - 1].toLowerCase() || specialType == "colour" && selected == correctColour) {
-            document.getElementById("quiz").style.background = "rgb(200, 255, 200)";
             if (types[type] == "text") {
                 input.blur(); // song 2
             }
-            disabled = true;
-            setTimeout((function() {
-                disabled = false;
-                document.getElementById("quiz").style.background = "none";
-                callEnd();
-            }), 500)
+            border("correct")
         } else {
             if (types[type] == "choice") {
-                errors.push([question[currentQuestion].questions[selected - 1], question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
-                document.getElementById("quiz").style.background = "rgb(255, 100, 100)";
-                disabled = true;
-                setTimeout((function() {
-                    disabled = false;
-                    document.getElementById("quiz").style.background = "none";
-                    callEnd();
-                }), 500)
+                errors.push([question[currentQuestion].question, question[currentQuestion].questions[selected - 1], question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
+                border("wrong")
+
             } else if (types[type] == "text") {
                 if (wrong == true) {
-                    errors.push([selected, question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
-                    document.getElementById("quiz").style.background = "rgb(255, 100, 100)";
-                    setTimeout((function() {
-                        document.getElementById("quiz").style.background = "none";
-                        callEnd();
-                    }), 500)
+                    errors.push([question[currentQuestion].question, selected, question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
+                    border("wrong")
                 }
             } else if (specialType == "colour") {
-                errors.push([randomColour[selected], question[currentQuestion].correct]);
-                document.getElementById("quiz").style.background = "rgb(255, 100, 100)";
-                disabled = true;
-                setTimeout((function() {
-                    disabled = false;
-                    document.getElementById("quiz").style.background = "none";
-                    callEnd();
-                }), 500)
+                console.log(question[currentQuestion])
+                errors.push([question[currentQuestion].question, randomColour[selected], question[currentQuestion].correct]);
+                border("wrong")
             } else {
                 console.warn("ERROR - Couldn't load question proparly")
             }
         }
     }
+}
+function border(type) {
+    var colour = "#ffffff"
+    if (type == "correct") {
+        colour = "rgb(200, 255, 200)";
+    } else {
+        colour = "rgb(255, 100, 100)";
+    }
+    document.getElementById("quiz").style.border = "5px solid " + colour;
+    disabled = true;
+    setTimeout((function() {
+        disabled = false;
+        document.getElementById("quiz").style.border = "5px solid white";
+        callEnd();
+    }), 500);
 }
 //adds special glyphs. Nothing too complicated.
 function add(value) {
@@ -194,31 +207,32 @@ function callEnd() {
         results();
     }
 }
-
+function displayResults() {
+    var mis = [];
+    let d = "<p>See what went wrong here:</p>";
+    d += "<table><tr><th>Question</th><th>Correct answer</th><th>Your answer</th></tr>";
+    for (let err of errors) {
+        d += "<tr><td>" + err[0] + "</td><td>" + err[2] + "</td><td>" + err[1] + "</td></tr>";
+        mis.push(err[0]);
+    }
+    if (specialType != "colour") {
+        localStorage.setItem("mistakes", JSON.stringify(errors));
+    }
+    d += "</table>";
+    document.getElementById("results").innerHTML = d;
+}
 function results() {
     result.style.display = "block";
     main.style.display = "none";
-    completeAchievement("In the aeroplane over the sea");
+    completeAchievement("John Peel Sessions");
     if (errors.length === 0) {
         completeAchievement("OK computer");
         document.getElementById('results').innerHTML = '<h1 class="glas">PERFECT!</h1>';
     } else if (errors.length === question.length) {
         completeAchievement("Nevermind");
-        let d = "<p>See what went wrong here:</p>";
-        d += "<table><tr><th>Correct answer</th><th>Your answer</th></tr>";
-        for (let err of errors) {
-            d += "<tr><td>" + err[1] + "</td><td>" + err[0] + "</td></tr>";
-        }
-        d += "</table>";
-        document.getElementById('results').innerHTML = d;
+        displayResults();
     } else {
-        let d = "<p>See what went wrong here:</p>";
-        d += "<table><tr><th>Correct answer</th><th>Your answer</th></tr>";
-        for (let err of errors) {
-            d += "<tr><td>" + err[1] + "</td><td>" + err[0] + "</td></tr>";
-        }
-        d += "</table>";
-        document.getElementById('results').innerHTML = d;
+        displayResults();
     }
 }
 

@@ -4,17 +4,19 @@
 <head>
   <%- include('../partials/head'); %>
   <title>Glas - Achievements</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/achieve.css">
 </head>
 
 <body>
-     <%- include('../partials/menu'); %>
-        <article id="main">
-            <div id="achievList">
+            <div class="content">
+            <%- include('../partials/menu'); %>
+            <div class="achieveList">
+                <div id="achievList">
+                </div>
+                <button class="danger" onclick="clearData()">Clear data</button>
             </div>
-            <button class="danger" onclick="clearData()">Clear data</button>
-        </article>
-      <%- include('../partials/footer'); %>
+            </div>
       <script src="../js/main.js"></script>        
       <script src="../js/achieve.js"></script>
 </body>

@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <%- include('../partials/head'); %>
-  <title>Glas - <%= title %></title>
-  <link rel="stylesheet" href="../css/style.css">
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/post.css">
+    <title>Glas - Home</title>
 </head>
-
-<body onload ='encode("<%- content %>","<%= title %>")'>
-     <%- include('../partials/menu'); %>
-        <article>
-          <a href = "/">Back to home</a>
-          <h1><%= title %></h1>
-          <% console.log(title) %>
-          <p style="white-space: pre-wrap" id="text"></p>
-          <img src="<%= image.url %>" alt="<%= image.alt %>" width="<%= image.width %>"height="<%= image.height %>">
-          <div id="link">
-              <a class="link" href="https://glas.low-fat-lard.repl.co/quiz/<%= posturl %>">Take a test on <%= title %></a>
-          </div>    
-        </article>
-      <%- include('../partials/footer'); %>
-      <script src="../js/main.js"></script>      
-      <script src="../js/post.js"></script>
-      <script src="../js/achieve.js"></script>     
+<body>
+<div class="content">
+    <%- include('../partials/menu'); %>
+    <div class="grids">
+        <div class="main">
+            <div id="post"></div>
+        </div>
+        <script type="text/javascript" src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+        <script src="../js/post.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/achieve.js"></script>
+    </div>
+</div>
 </body>
-
 </html>

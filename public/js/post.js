@@ -1,29 +1,52 @@
-
-function encode(text, url) {
-    console.log(url);
-    text = text.replace(/"/gi, "")
-    text = text.replace(/-i/gi, "<span style='font-style:italic;'>");
-    text = text.replace(/-b/gi, "<span style='font-weight:900;'>");
-    text = text.replace(/-u/gi, "<span style='text-decoration:underline;'>");
-    text = text.replace(/-n-/gi, "</br>");
-    text = text.replace(/-t-/gi, "<table>");
-    text = text.replace(/-et-/gi, "</table>");
-    text = text.replace(/-th-/gi, "<th>");
-    text = text.replace(/-eth-/gi, "</th>");
-    text = text.replace(/-tr-/gi, "<tr>");
-    text = text.replace(/-etr-/gi, "</tr>");
-    text = text.replace(/-td-/gi, "<td>");
-    text = text.replace(/-etd-/gi, "</td>");
-    text = text.replace(/-e/gi, "</span>");
-    text = text.replace(/-h/gi, "<hr>");
-    console.log(text);
-    classifyText(url);
-    document.getElementById("text").innerHTML = text;
+function createpost() {
+    data.forEach(r => {
+        console.log(r.slug + "," + path[2]);
+        if (r.slug == path[2]) {
+            document.getElementById("post").innerHTML = mainPost(r);
+        } else if (path[2] == "random") {
+            document.getElementById("post").innerHTML = mainPost(data[Math.floor(Math.random() * data.length)]);
+        }
+    })
 }
-function classifyText(url) {
-    if (url == "Hangman") {
-        document.getElementById("link").innerHTML = `<a class="link" href="https://glas.low-fat-lard.repl.co/game/hangman">Play Hangman</a>`
+
+function mainPost(r) {
+    return `
+        <header class="header">
+          <h1 class="title">${r.title}</h1>
+        </header>
+        <div class="listTags">
+        `+ displayTags(r.tags) + `
+        </div> 
+        `+ converter(r.mainContent) + `
+
+        `+ createButton(r, r.articleType.articleType) + `
+        <br>
+            `
+}
+
+function createButton(r, type) {
+    var text = "";
+    var link = "";
+    var style = "";
+    if (type == "quiz") {
+        text = "Take quiz on " + r.title;
+        link = "https://glas.low-fat-lard.repl.co/quiz/" + r.slug;
+    } else if (type == "game") {
+        text = "Play game";
+        link = "https://glas.low-fat-lard.repl.co/game/" + r.slug;
+    } else {
+        text = "";
+        link = "";
+        style = "display: none";
     }
 
+    return `
+    <a class="button" style="`+ style + `" href="` + link + `">` + text + `</a>
+    `;
+}
 
+function converter(md) {
+    var converter = new showdown.Converter();
+    var html = converter.makeHtml(md);
+    return html
 }
