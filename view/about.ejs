@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <%- include('../partials/head'); %>
-  <title>Glas - About</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <%- include('../partials/head'); %>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Glas - Home</title>
 </head>
 
 <body>
-     <%- include('../partials/menu'); %>
-        <article>
-          <h1>☘️Glas</h1>
+    <div class="content">
+      <%- include('../partials/menu'); %>
+      <main class="main">
+        <h1>☘️Glas</h1>
             Welcome to glas! Glas is an interactive irish learning website. <br>If you click on an article, the
             description for each Irish rule will come up. At the end of the article, a link to the test of that article
             should be there. If you have anything you want to change about the website, just create an issue or a fork
             to
           the GitHub repo. I will make sure to see it. Made by <a href='https://github.com/Low-Fat-Lard'>Low-Fat-Lard</a>
-        </article>
-      <%- include('../partials/footer'); %>
-      <script src="./js/achieve.js"></script>
-      <script src="./js/main.js"></script>
+        
+      </main>
+    </div>
+      <script src="js/main.js"></script>
+      <script src="js/achieve.js"></script>
 </body>
 
 </html>

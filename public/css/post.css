@@ -1,0 +1,39 @@
+.grids {
+  margin: 0px;
+}
+.main {
+  padding-left: 5rem;
+  padding-right: 5rem; 
+  padding-top: 2rem;
+  padding-bottom: 5rem; 
+  background-color: #ffffff; 
+  margin: auto;
+  width: 60%;
+  border-radius: 1.5rem; 
+}
+.title {
+  margin-bottom: 0.5rem; 
+  margin-top: 0.5rem;
+  color: #000000; 
+  font-size: 1.3rem;
+  line-height: 1.75rem; 
+  font-weight: 700; 
+  cursor: pointer; 
+}
+.button {
+    float: right;
+    border: none;
+    background: #F3F4F6;
+    color: black;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    margin: 0.5rem;
+    text-decoration: none;
+}
+a {
+  color: #b2876f;
+  margin-top: 2rem;
+  text-decoration: underline;
+  position: relative;
+}

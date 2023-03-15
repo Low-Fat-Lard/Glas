@@ -40,12 +40,12 @@ function completeAchievement(name) {
                 a.complete = true;
                 targetAchievement = a
                 completedAchievement = targetAchievement;
-                document.getElementById("name").innerHTML = a.name;
-                document.getElementById("description").innerHTML = a.description;
-                document.getElementById("achievement").classList.add("active");
+                // document.getElementById("name").innerHTML = a.name;
+                // document.getElementById("description").innerHTML = a.description;
+                // document.getElementById("achievement").classList.add("active");
                 setTimeout(function() {
                     achieveData[achieveData.indexOf(a)] = targetAchievement;
-                    document.getElementById("achievement").classList.remove("active");
+                    //document.getElementById("achievement").classList.remove("active");
                 }, 3500)
             }
             updateAchievements();
@@ -57,9 +57,6 @@ function completeAchievement(name) {
 function draw() {
 
     achieveData = JSON.parse(localStorage.getItem('achievements'));
-    var random = achieveData[Math.floor(Math.random() * achieveData.length)];
-    document.getElementById("label").innerHTML = random.name;
-    document.getElementById("achieve").innerHTML = random.description;
     if (document.getElementById("achievList")) {
         document.getElementById("achievList").innerHTML = "";
         achieveData.forEach(function(a) {
