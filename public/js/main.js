@@ -54,8 +54,8 @@ function init() {
             data = res.data.allArticles;
             tags = res.data.allTags;
             if (content) {
-                populateArticles();
                 populateTags();
+                searchPost();
             } else {
                 createpost();
             }

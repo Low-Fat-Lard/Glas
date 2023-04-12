@@ -4,6 +4,7 @@
     <%- include('../partials/head'); %>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+        
     <title>Glas - Home</title>
 </head>
 
@@ -16,8 +17,9 @@
           <div class="tags">
             🏷️ Tags
             <ul class="tagging" id="tags">
-                  <li active="true" onclick="clickHandle('All')" class="tag">All Tags</li>
-          <!--    <li  onclick="clickHandle(this.innerHTML)" class="tag">Tags</li> -->
+                <a href="https://glas.low-fat-lard.repl.co/?tag=All">
+                  <li active="true" class="tag">All Tags</li>
+                </a>
             </ul>
           </div>
           <div class="posts">
@@ -55,5 +57,4 @@
       <script src="js/home.js"></script>
       <script src="js/achieve.js"></script>
 </body>
-
 </html>

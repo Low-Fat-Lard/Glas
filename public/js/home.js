@@ -1,17 +1,15 @@
-var tag = "All", // current selected tag. All is the default value
-    // selectors
-    header = document.getElementById("header"),
-    post = document.getElementById("post"),
-    tagContent = document.getElementById("tags"),
-    input = document.getElementById("search");
+// selectors
+var header = document.getElementById("header");
+var post = document.getElementById("post");
+var tagContent = document.getElementById("tags");
+var input = document.getElementById("search");
+var tag = "All";
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+console.log(tag);
 //populate articeles
-function populateArticles() {
-    data.forEach(r => {
-        content.innerHTML += cardPost(r);
 
-    });
-}
 function mistakes() {
     if (localStorage.getItem("mistakes")) {
         var mistakes = JSON.parse(localStorage.getItem("mistakes"));
@@ -29,7 +27,7 @@ function achievements() {
         var achievesNo = 0;
         for (var i = 0; i < achieves.length; i++) {
             if (achieves[i].complete == true) {
-                achievesNo+=1;
+                achievesNo += 1;
             }
         }
         if (achievesNo == achieves.length) {
@@ -46,36 +44,43 @@ function populateTags() {
         tagContent.innerHTML += tagPost(r);
     })
 }
-function clickHandle(clickedTag) {
-    tag = clickedTag;
-    searchPost();
-}
-
-function searchPost() {
+function searchPost() 
+{
     var term = input.value;
+    if (urlParams.get("tag")) 
+    {
+        tag = urlParams.get("tag");
+    } else 
+    {
+        tag = "All"
+    }
     //Searching mechanism. No real algorithm involved. Brute forces.
-    var tagData = [];
+    var tagList = [];
     var searchData = [];
+    // New search algo - should be faster
     data.forEach(r => {
-        if (JSON.stringify(r.title).toLowerCase().includes(term.toLowerCase())) {
-            searchData.push(r);
+        tagList = [];
+        var subject = (r.title + tagList.join("") + r.excerpt).toLowerCase();
+        var query = term.toLowerCase();
+        
+        for (var i = 0; i < r.tags.length; i++) 
+        {
+            tagList.push(r.tags[i].tag);
         }
-    });
-    searchData.forEach(t => {
-        if (tag == "All") {
-            tagData.push(t);
-        } else {
-            for (var i = 0; i < t.tags.length; i++) {
-                if (tag.toLowerCase() == t.tags[i].tag.toLowerCase()) {
-                    tagData.push(t);
-                }
+
+        if ((subject).includes(query)) 
+        {
+            if (tag == "All" || tagList.join("").toLowerCase().includes(tag.toLowerCase())) 
+            {
+                searchData.push(r);
             }
         }
     });
-    if (tagData != "") {
+
+    if (searchData != "") {
         content.innerHTML = "";
-        for (var i = 0; i < tagData.length; i++) {
-            content.innerHTML += cardPost(tagData[i])
+        for (var i = 0; i < searchData.length; i++) {
+            content.innerHTML += cardPost(searchData[i])
         }
     } else {
         //error handeling.
@@ -98,15 +103,18 @@ function cardPost(r) {
                     <br>
                 </div>
             </a>
-            `
+    `
 }
 
 function tagPost(r) {
     return `
-           <li id="`+ r.id + `" onclick="clickHandle('` + r.tag + `')" class="tag">
-           ` + r.tag + `
-           </li>
-        `
+            <a href="https://glas.low-fat-lard.repl.co/?tag=` + r.tag + `">
+               <li id="`+ r.id + `" class="tag">
+               ` + r.tag + `
+               </li>
+            </a>
+    
+            `
 }
 mistakes();
 achievements();

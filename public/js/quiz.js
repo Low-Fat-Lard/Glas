@@ -9,7 +9,7 @@ var questionAmount = 7,
     errors = [],
     assist = ["á", "é", "í", "ó", "ú"],
     types = ["choice", "text"], //main quiz types
-    specialType = "", //one off quiz types
+    specialType = "", //once off quiz types
     colours = ["red", "yellow", "orange", "green", "pink", "blue", "purple", "black"],
     randomColour = "green",
     correctColour = 1,
@@ -36,20 +36,25 @@ function load(url) {
                     question.push(questionData[i]);
                 }
             }
-            
+
         }
     } else {
-        if(url == "colours") {
+        if (url == "colours") {
             completeAchievement("Blue");
         }
         for (var i = 0; i < questionData.length; i++) {
             if (String(questionData[i].posturl) == url) {
-                    question.push(questionData[i]);
-                }
+                question.push(questionData[i]);
             }
+        }
     }
-    console.log(question)
     checkType(url);
+}
+function multipleInArray(arr, values) {
+    return values.every(value => {
+        var lowercaseWords = arr.map(ar => ar.toLowerCase());
+        return lowercaseWords.includes(value);
+    });
 }
 //Checks type
 function checkType(url) {
@@ -88,10 +93,9 @@ function loadText(question) {
     document.getElementById("question").innerHTML = question.question;
     var input = document.createElement("input");
     input.id = "input";
-    input.setAttribute("onkeyup", "check()");
     input.autocomplete = "off";
     submit.appendChild(input);
-    input.addEventListener("keyup", (function(event) {
+    input.addEventListener("keyup", (function (event) {
         if (event.key === "Enter") {
             wrong = true;
             check();
@@ -100,7 +104,7 @@ function loadText(question) {
     var enter = document.createElement("button");
     enter.innerHTML = "submit";
     enter.className = "submit";
-    enter.addEventListener("click", (function(event) {
+    enter.addEventListener("click", (function (event) {
         wrong = true;
         check();
         wrong = false;
@@ -140,6 +144,7 @@ function loadColour(question) {
         submit.appendChild(buttons);
     }
 }
+
 //checks answer
 function check(select) {
     var selected;
@@ -149,25 +154,23 @@ function check(select) {
     } else {
         selected = select;
     }
-    console.log(disabled);
     if (!disabled) {
-        if (selected == question[currentQuestion].correct || types[type] == "text" && selected.toLowerCase() == question[currentQuestion].questions[question[currentQuestion].correct - 1].toLowerCase() || specialType == "colour" && selected == correctColour) {
+        if (types[type] == "choice" && multipleInArray(question[currentQuestion].correct, [question[currentQuestion].questions[selected - 1].toLowerCase()]) || types[type] == "text" && multipleInArray(question[currentQuestion].correct, [selected.toLowerCase()]) || specialType == "colour" && selected == correctColour) {
             if (types[type] == "text") {
                 input.blur(); // song 2
             }
             border("correct")
         } else {
             if (types[type] == "choice") {
-                errors.push([question[currentQuestion].question, question[currentQuestion].questions[selected - 1], question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
+                errors.push([question[currentQuestion].question, question[currentQuestion].questions[selected - 1], question[currentQuestion].correct.join(" / ")]);
                 border("wrong")
 
             } else if (types[type] == "text") {
                 if (wrong == true) {
-                    errors.push([question[currentQuestion].question, selected, question[currentQuestion].questions[question[currentQuestion].correct - 1]]);
+                    errors.push([question[currentQuestion].question, selected, question[currentQuestion].correct.join(" / ")]);
                     border("wrong")
                 }
             } else if (specialType == "colour") {
-                console.log(question[currentQuestion])
                 errors.push([question[currentQuestion].question, randomColour[selected], question[currentQuestion].correct]);
                 border("wrong")
             } else {
@@ -185,10 +188,14 @@ function border(type) {
     }
     document.getElementById("quiz").style.border = "5px solid " + colour;
     disabled = true;
-    setTimeout((function() {
+    setTimeout((function () {
         disabled = false;
         document.getElementById("quiz").style.border = "5px solid white";
-        callEnd();
+        if (type == "correct") {
+            callEnd();
+        } else {
+            correctMistake();
+        }
     }), 500);
 }
 //adds special glyphs. Nothing too complicated.
@@ -196,7 +203,18 @@ function add(value) {
     var input = document.getElementById("input");
     input.value += value;
     input.focus();
-    check();
+}
+
+function correctMistake() {
+    var html = "<h4>Correct answer</h4>"
+    html += "<p>" + errors[errors.length - 1][2] + "</p>"
+    html += "<h4>Your answer</h4>"
+    html += "<p>" + errors[errors.length - 1][1] + "</p>"
+    buttons = document.createElement("button");
+    buttons.innerHTML = "next";
+    buttons.setAttribute("onclick", "callEnd()");
+    submit.innerHTML = html;
+    submit.appendChild(buttons);
 }
 
 function callEnd() {
@@ -224,12 +242,12 @@ function displayResults() {
 function results() {
     result.style.display = "block";
     main.style.display = "none";
-    completeAchievement("John Peel Sessions");
+    //completeAchievement("John Peel Sessions");
     if (errors.length === 0) {
-        completeAchievement("OK computer");
+        //completeAchievement("OK computer");
         document.getElementById('results').innerHTML = '<h1 class="glas">PERFECT!</h1>';
     } else if (errors.length === question.length) {
-        completeAchievement("Nevermind");
+        //completeAchievement("Nevermind");
         displayResults();
     } else {
         displayResults();

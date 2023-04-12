@@ -3,77 +3,77 @@
     "question": ["What is the word for 'I' in Irish"],
     "posturl": ["pronouns"],
     "questions": ["mé", "tú", "sé", "sinn"],
-    "correct": [1]
+    "correct": ["mé"]
   },
   {
     "question": ["Translate 'muid' into English"],
     "posturl": ["pronouns"],
     "questions": ["you", "I", "we", "she"],
-    "correct": [3]
+    "correct": ["we","us"]
   },
   {
     "question": ["Translate 'Is duine ard mé' into English"],
     "posturl": ["copula"],
     "questions": ["I am a tall person", "My name is ard"],
-    "correct": [1]
+    "correct": ["I am a tall person"]
   },
   {
     "question": ["Translate 'Is duine faiteach í' into English"],
     "posturl": ["copula"],
     "questions": ["She is fatal", "She is a shy person"],
-    "correct": [2]
+    "correct": ["She is a shy person"]
   },
     {
     "question": ["Translate 'Abair' into English"],
     "posturl": ["irregular"],
     "questions": ["say", "catch", "be", "make/do"],
-    "correct": [1]
+    "correct": ["say","to say"]
   },
     {
     "question": ["What is the word for 'to come' in Irish"],
     "posturl": ["irregular"],
     "questions": ["Faigh", "Tar", "Teigh", "Tabhair"],
-    "correct": [2]
+    "correct": ["Tar"]
   },
     {
     "question": ["What is the word for 'to eat' in Irish"],
     "posturl": ["irregular"],
     "questions": ["Ith", "Feic"],
-    "correct": [1]
+    "correct": ["Ith"]
   },
     {
     "question": ["What is the word for 'to go' in Irish"],
     "posturl": ["irregular"],
     "questions": ["Ith", "Feic", "Teigh","Tabhair"],
-    "correct": [3]
+    "correct": ["Teigh"]
   },    
     {
     "question": ["What is the word for 'to give' in Irish"],
     "posturl": ["irregular"],
     "questions": ["Ith", "Feic", "Teigh","Tabhair"],
-    "correct": [4]
+    "correct": ["Tabhair"]
   },    
     {
     "question": ["What is the word for 'to get' in Irish"],
     "posturl": ["irregular"],
     "questions": ["Feic", "Tar", "Faigh","Tabhair"],
-    "correct": [3]
+    "correct": ["Faigh"]
   },
     {
     "question": ["Translate 'Feic' into English"],
     "posturl": ["irregular"],
     "questions": ["Eat", "See", "Fake","Make/Do"],
-    "correct": [2]
+    "correct": ["See","To See"]
   },{
     "question": ["Translate 'Make/do' into Irish"],
     "posturl": ["irregular"],
     "questions": ["Déan", "Feic", "Tabhair", "Faigh"],
-    "correct": [1]
+    "correct": ["Déan"]
   },{
     "question": ["Translate 'Bí' into English"],
     "posturl": ["irregular"],
     "questions": ["Be", "See", "Fake","Make/Do"],
-    "correct": [1]
+    "correct": ["Be","To be"]
   },{
     "question": ["Glas"],
     "posturl": ["colours"],
@@ -114,21 +114,66 @@
     "question": ["What is (I'm with) in Irish"],
     "posturl": ["prepositional-pronouns"],
     "questions": ["Linn", "Leo", "Leat","Liom"],
-    "correct": [4]
+    "correct": ["Liom"]
   },{
     "question": ["Translate 'Agam' into English"],
     "posturl": ["prepositional-pronouns"],
     "questions": ["They have", "I have", "We have", "He has"],
-    "correct": [2]
+    "correct": ["I have"]
   },{
     "question": ["Translate 'I bought' into Irish"],
     "posturl": ["past-tense"],
     "questions": ["D'ceannaigh mé", "cheannaigh mé", "ceannaigh mé","cheannaíomar mé"],
-    "correct": [2]
+    "correct": ["cheannaigh mé"]
+  },{
+    "question": ["Translate 'We bought' into Irish"],
+    "posturl": ["past-tense"],
+    "questions": ["cheannamar", "cheanneamar", "cheannaigh muid","ceannaigh muid"],
+    "correct": ["cheannamar", "cheannaigh muid", "cheannaigh sinn"]
   },{
     "question": ["Translate 'We threw/wore/spent' into Irish"],
     "posturl": ["past-tense"],
     "questions": ["chaitheamar", "caithamar", "caitheamar", "chaithamar"],
-    "correct": [1]
+    "correct": ["chaitheamar","chaith muid","chaith sinn"]
+  },{
+    "question": ["Translate 'I listen' into Irish"],
+    "posturl": ["the-present-tense"],
+    "questions": ["Éistim", "Éisteann mé", "D'Éistim","Éist mé"],
+    "correct": ["Éistim"]
+  },{
+    "question": ["Translate 'I take' into Irish"],
+    "posturl": ["the-present-tense"],
+    "questions": ["Tógaim", "Tógann tú", "Tógann mé","Thóg mé"],
+    "correct": ["Tógaim"]
+  },{
+    "question": ["Translate 'We put' into Irish"],
+    "posturl": ["the-present-tense"],
+    "questions": ["cuirimid", "cuir muid", "cuiraimid", "cuireamid"],
+    "correct": ["cuirimid","cuir muid","cuir sinn"]
+  },{
+    "question": ["Bhí mé ag an (cailín)"],
+    "posturl": ["eclipsis"],
+    "questions": ["cailín", "gcailín", "mcailín","bhcailín"],
+    "correct": ["gcailín"]
+  },{
+    "question": ["Fuair me litir ón (páirc)"],
+    "posturl": ["eclipsis"],
+    "questions": ["npáirc", "dpáirc", "páirc","bpáirc"],
+    "correct": ["bpáirc"]
+  },{
+    "question": ["D'éalaigh na gadaithe ón (príosún)"],
+    "posturl": ["eclipsis"],
+    "questions": ["bríosún", "bpríosún", "príosún", "npríosún"],
+    "correct": ["bpríosún"]
+  },{
+    "question": ["an bhfuil tú leis an (buachaill)?"],
+    "posturl": ["eclipsis"],
+    "questions": ["dbuachaill", "buachaill", "mbuachaill"],
+    "correct": ["mbuachaill"]
+  },{
+    "question": ["Tá seacht (bord) ann"],
+    "posturl": ["eclipsis"],
+    "questions": ["tbord", "mbord", "bord","dbord"],
+    "correct": ["mbord"]
   }
 ]

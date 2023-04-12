@@ -1,12 +1,13 @@
 function createpost() {
-    data.forEach(r => {
-        console.log(r.slug + "," + path[2]);
-        if (r.slug == path[2]) {
-            document.getElementById("post").innerHTML = mainPost(r);
-        } else if (path[2] == "random") {
-            document.getElementById("post").innerHTML = mainPost(data[Math.floor(Math.random() * data.length)]);
-        }
-    })
+    if (path[2] == "random") {
+        document.getElementById("post").innerHTML = mainPost(data[Math.floor(Math.random() * data.length)]);
+    } else {
+        data.forEach(r => {
+            if (r.slug == path[2]) {
+                document.getElementById("post").innerHTML = mainPost(r);
+            }
+        })
+    }
 }
 
 function mainPost(r) {
